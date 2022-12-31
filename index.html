@@ -19,6 +19,20 @@
         <option value="Europe/London">London, England</option>
       </select>
     </div>
-    <script src="src/index.js"></script>
+    <script>
+      const getCityTime = (event) => {
+        if (event.target.value.length > 0) {
+          let time = moment()
+            .tz(event.target.value)
+            .format("dddd, MMMM D, YYYY h:mm A");
+
+          alert(`It is ${time} in ${event.target.value}`);
+        }
+      };
+
+      document
+        .querySelector("#countries")
+        .addEventListener("change", getCityTime);
+    </script>
   </body>
 </html>
