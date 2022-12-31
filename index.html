@@ -7,6 +7,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <title>World Clock</title>
+    <link href="src/styles.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="menu">
+      <label for="countries">Pick a city to see the current time:</label>
+      <select id="countries">
+        <option value="">Select a city</option>
+        <option value="dallas">Dallas, Texas, USA</option>
+        <option value="tokyo">Tokyo, Japan</option>
+        <option value="london">London, England</option>
+      </select>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>

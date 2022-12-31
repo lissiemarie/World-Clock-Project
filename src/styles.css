@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.menu {
+    border: solid 5px #000;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 25% auto;
+}
+
+select {
+    width: 25%;
+    height: 25px;
+    font-size: 17px;
+}
