@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 25px;
@@ -9,11 +10,16 @@ body {
     border: solid 5px #000;
     border-radius: 15px;
     padding: 50px;
-    margin: 25% auto;
+    margin: 25% auto 0;
 }
 
 select {
-    width: 25%;
+    width: 80%;
     height: 25px;
     font-size: 17px;
+}
+
+p {
+    margin: 10px auto;
+    font-size: 20px;
 }
