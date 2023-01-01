@@ -9,8 +9,9 @@ body {
     border-radius: 15px;
     padding: 30px;
     margin: 10% auto 0;
-    box-shadow: 10px 14px 23px 13px rgba(0, 0,0, 0.2);
-    width: 80%;
+    box-shadow: 10px 14px 30px 5px rgba(0, 0,0, 0.2);
+    width: 500px;
+    height: 525px;
     background-color: #fff;
 }
 
@@ -25,6 +26,7 @@ select {
 
 h1 {
     text-align: center;
+    margin-top: 10px;
 }
 
 .city {
