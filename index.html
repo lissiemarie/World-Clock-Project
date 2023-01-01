@@ -19,23 +19,23 @@
         <option value="Europe/London">London</option>
       </select>
       <div class="cities">
-        <div>
+        <div id="new-york">
           <h3>New York</h3>
           <div class="date">December 31st, 2022</div>
         </div>
-        <div class="time">12:00</div>
+        <div class="time" id="new-york-time">12:00</div>
         <hr />
-        <div>
+        <div id="berlin">
           <h3>Berlin</h3>
           <div class="date">December 31st, 2022</div>
         </div>
-        <div class="time">12:00</div>
+        <div class="time" id="berlin-time">12:00</div>
         <hr />
-        <div>
+        <div id="aukland">
           <h3>Aukland</h3>
           <div class="date">December 31st, 2022</div>
         </div>
-        <div class="time">12:00</div>
+        <div class="time" id="aukland-time">12:00</div>
       </div>
     </div>
     <p>
@@ -43,19 +43,6 @@
       <a href="https://github.com/lissiemarie">Github</a> and hosted on
       <a href="https://www.netlify.com">Netlify</a>
     </p>
-    <script>
-      const getCityTime = (event) => {
-        if (event.target.value.length > 0) {
-          let time = moment()
-            .tz(event.target.value)
-            .format("dddd, MMMM D, YYYY h:mm A");
-
-          alert(`It is ${time} in ${event.target.value}`);
-        }
-      };
-
-      let element = document.querySelector("#countries");
-      element.addEventListener("change", getCityTime);
-    </script>
+    <script src="src/index.js"></script>
   </body>
 </html>
