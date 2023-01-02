@@ -56,7 +56,8 @@ const updateCity = event => {
           <div class="date">${cityTime.format("MMM Do YYYY")}</div>
         </div>
         <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format("a")}</small></div>
-        <hr /></div>`;
+        <hr />
+        </div>`;
 }
 
 updateTime();
