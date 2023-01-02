@@ -1,16 +1,17 @@
-  const getCityTime = (event) => {
-        if (event.target.value.length > 0) {
-          let time = moment()
-            .tz(event.target.value)
-            .format("dddd, MMMM D, YYYY h:mm A");
+//   const getCityTime = (event) => {
+//         if (event.target.value.length > 0) {
+//           let time = moment()
+//             .tz(event.target.value)
+//             .format("dddd, MMMM D, YYYY h:mm A");
 
-          alert(`It is ${time} in ${event.target.value}`);
-        }
-      };
+//           alert(`It is ${time} in ${event.target.value}`);
+//         }
+//       };
 
-      let element = document.querySelector("#countries");
-      element.addEventListener("change", getCityTime);
+//       let element = document.querySelector("#countries");
+//       element.addEventListener("change", getCityTime);
 
+// Updated times for locations on page load
 const updateTime = () => {
 
     //   New York Elements
@@ -38,5 +39,27 @@ const updateTime = () => {
       auklandTime.innerHTML = moment().tz("Pacific/Aukland").format('hh:mm:ss [<small>]a[</small>]')
 };
 
+// Function to update chosen cities on display
+const updateCity = event => {
+    let cityTimeZone = event.target.value;
+    let cityName = cityTimeZone.replace("_", "").split("/")[1];
+    let cityTime = moment().tz(cityTimeZone);
+     let listOfCitiesElement = document.querySelector(".cities");
+    
+     listOfCitiesElement.innerHTML = `
+     <div class="cities">
+        <div>
+          <h3>${cityName}</h3>
+          <div class="date">${cityTime.format("MMM Do YYYY")}</div>
+        </div>
+        <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format("a")}</small></div>
+        <hr /></div>`;
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+// Replace with chosen cities from select
+let citiesSelectElement = document.querySelector("#countries")
+
+citiesSelectElement.addEventListener("change", updateCity);
