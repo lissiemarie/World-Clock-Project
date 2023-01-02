@@ -42,6 +42,9 @@ const updateTime = () => {
 // Function to update chosen cities on display
 const updateCity = event => {
     let cityTimeZone = event.target.value;
+    if(cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_", "").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
      let listOfCitiesElement = document.querySelector(".cities");
